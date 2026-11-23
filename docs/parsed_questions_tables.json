@@ -1,0 +1,2176 @@
+{
+  "2.docx": {
+    "title": "2-Amaliy mashg‘ulot: Kompyuterlarning asosiy va qo‘shimcha qurilmalarini o‘rganish",
+    "tables": [
+      [
+        [
+          "Qurilma",
+          "Joylashuvi",
+          "Funksional guruhi",
+          "Vazifasi"
+        ],
+        [
+          "Klaviatura",
+          "Tashqi",
+          "Kiritish",
+          "Matn va buyruqlarni kiritish"
+        ],
+        [
+          "Sichqoncha",
+          "Tashqi",
+          "Kiritish",
+          "Ko‘rsatkichni boshqarish va tanlash"
+        ],
+        [
+          "Monitor",
+          "Tashqi",
+          "Chiqarish",
+          "Tasvirni ko‘rsatish"
+        ],
+        [
+          "Printer",
+          "Tashqi",
+          "Chiqarish",
+          "Matn va grafikani qog‘ozga chiqarish"
+        ],
+        [
+          "Mikrofon",
+          "Tashqi",
+          "Kiritish",
+          "Ovoz signalini kiritish"
+        ],
+        [
+          "Veb-kamera",
+          "Tashqi",
+          "Kiritish",
+          "Tasvir va videoni kiritish"
+        ],
+        [
+          "USB flesh-xotira",
+          "Tashqi",
+          "Kiritish-chiqarish",
+          "Ma’lumot saqlash va almashish"
+        ],
+        [
+          "RAM",
+          "Ichki",
+          "Xotira",
+          "Vaqtinchalik ma’lumot saqlash"
+        ],
+        [
+          "SSD",
+          "Ichki yoki tashqi",
+          "Saqlash",
+          "Doimiy ma’lumot saqlash"
+        ],
+        [
+          "GPU",
+          "Ichki",
+          "Qayta ishlash",
+          "Grafik va parallel hisoblash"
+        ]
+      ],
+      [
+        [
+          "Vazifa",
+          "Ustuvor qurilmalar",
+          "Izoh"
+        ],
+        [
+          "Ofis va ta’lim",
+          "CPU, 8–16 GB RAM, SSD, monitor, klaviatura, sichqoncha",
+          "Barqarorlik va tezkor SSD muhim."
+        ],
+        [
+          "Dasturlash",
+          "Ko‘p yadroli CPU, yetarli RAM, SSD, qulay monitor",
+          "IDE, brauzer va virtual muhitlar bir vaqtda ishlashi mumkin."
+        ],
+        [
+          "Grafik dizayn",
+          "CPU, katta RAM, GPU, sifatli monitor, SSD",
+          "Rang aniqligi va grafik tezlatish muhim."
+        ],
+        [
+          "Video montaj",
+          "Ko‘p yadroli CPU, katta RAM, GPU, tez SSD",
+          "Katta hajmli media fayllar bilan ishlanadi."
+        ],
+        [
+          "Oddiy multimedia",
+          "Integratsiyalashgan GPU, SSD, audio qurilmalar",
+          "Kundalik vazifalar uchun yetarli konfiguratsiya tanlanadi."
+        ]
+      ],
+      [
+        [
+          "№",
+          "Qurilma nomi",
+          "Ichki/Tashqi",
+          "Kiritish/Chiqarish/K-Ch",
+          "Vazifasi"
+        ],
+        [
+          "1",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "2",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "3",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "4",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "5",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "6",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "7",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "8",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "9",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ],
+        [
+          "10",
+          "________________",
+          "__________",
+          "________________",
+          "________________________"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Ichki va tashqi qurilmalar qanday farqlanadi?",
+      "2. Asosiy va qo‘shimcha qurilma tushunchalari nimani bildiradi?",
+      "3. Kiritish qurilmalariga misollar keltiring.",
+      "4. Chiqarish qurilmalarining vazifasi nimadan iborat?",
+      "5. Kiritish-chiqarish qurilmasiga misol keltiring va izohlang.",
+      "6. Printer va skanerning ma’lumot oqimidagi farqi nimada?",
+      "7. Tashqi SSD va ichki SSD qaysi jihatdan bir xil va qaysi jihatdan farq qiladi?",
+      "8. Qurilma tanlashda foydalanuvchi vazifasi nima uchun hisobga olinadi?",
+      "9. GPU qaysi vazifalarda muhim ahamiyatga ega?",
+      "10. Noutbukda qaysi qurilmalar bitta korpusga birlashtirilgan?"
+    ]
+  },
+  "4.docx": {
+    "title": "4-Amaliy mashg‘ulot: Kompyuterni tashkil etishning arifmetik asoslari",
+    "tables": [
+      [
+        [
+          "Sanoq tizimi",
+          "Asosi",
+          "Foydalaniladigan belgilar",
+          "Misol"
+        ],
+        [
+          "Ikkilik",
+          "2",
+          "0, 1",
+          "101101₂"
+        ],
+        [
+          "Sakkizlik",
+          "8",
+          "0–7",
+          "725₈"
+        ],
+        [
+          "O‘nlik",
+          "10",
+          "0–9",
+          "245₁₀"
+        ],
+        [
+          "O‘n oltilik",
+          "16",
+          "0–9 va A–F",
+          "3AF₁₆"
+        ]
+      ],
+      [
+        [
+          "Razryad",
+          "2⁷",
+          "2⁶",
+          "2⁵",
+          "2⁴",
+          "2³",
+          "2²",
+          "2¹",
+          "2⁰"
+        ],
+        [
+          "Qiymat",
+          "128",
+          "64",
+          "32",
+          "16",
+          "8",
+          "4",
+          "2",
+          "1"
+        ]
+      ],
+      [
+        [
+          "Tizim",
+          "Raqamlar soni",
+          "Eng katta bitta raqam",
+          "Kompyuterda qo‘llanishiga misol"
+        ],
+        [
+          "2-lik",
+          "2",
+          "1",
+          "Bitlar, mantiqiy holatlar"
+        ],
+        [
+          "8-lik",
+          "8",
+          "7",
+          "Ikkilik yozuvni 3 bitli guruhlar bilan ixchamlash"
+        ],
+        [
+          "10-lik",
+          "10",
+          "9",
+          "Kundalik hisob-kitob"
+        ],
+        [
+          "16-lik",
+          "16",
+          "F",
+          "Manzil, mashina kodi va ikkilik ma’lumotni ixcham yozish"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Sanoq tizimi nima?",
+      "2. Pozitsion sanoq tizimining asosiy xususiyati nimada?",
+      "3. Ikkilik sanoq tizimida qaysi raqamlar ishlatiladi?",
+      "4. O‘n oltilik tizimda A–F belgilarining qiymati qanday?",
+      "5. Razryad og‘irligi deganda nima tushuniladi?",
+      "6. Bit va bayt qanday farqlanadi?",
+      "7. Nima uchun kompyuterda ikkilik sanoq tizimi qulay?",
+      "8. 8 bit bilan nechta kombinatsiya hosil qilinadi?",
+      "9. O‘n oltilik sanoq tizimining kompyuter texnikasidagi afzalligi nimada?",
+      "10. 1011₂ sonini razryadlar orqali qanday tahlil qilish mumkin?"
+    ]
+  },
+  "5.docx": {
+    "title": "5-Amaliy mashg‘ulot: Turli xil sanoq tizimlarida sonlarni bir sanoq tizimidan boshqasiga o‘tkazish",
+    "tables": [
+      [
+        [
+          "O‘nlik",
+          "Ikkilik",
+          "Sakkizlik",
+          "O‘n oltilik"
+        ],
+        [
+          "0",
+          "0000",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0001",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "0010",
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "0011",
+          "3",
+          "3"
+        ],
+        [
+          "4",
+          "0100",
+          "4",
+          "4"
+        ],
+        [
+          "5",
+          "0101",
+          "5",
+          "5"
+        ],
+        [
+          "6",
+          "0110",
+          "6",
+          "6"
+        ],
+        [
+          "7",
+          "0111",
+          "7",
+          "7"
+        ],
+        [
+          "8",
+          "1000",
+          "10",
+          "8"
+        ],
+        [
+          "9",
+          "1001",
+          "11",
+          "9"
+        ],
+        [
+          "10",
+          "1010",
+          "12",
+          "A"
+        ],
+        [
+          "11",
+          "1011",
+          "13",
+          "B"
+        ],
+        [
+          "12",
+          "1100",
+          "14",
+          "C"
+        ],
+        [
+          "13",
+          "1101",
+          "15",
+          "D"
+        ],
+        [
+          "14",
+          "1110",
+          "16",
+          "E"
+        ],
+        [
+          "15",
+          "1111",
+          "17",
+          "F"
+        ]
+      ],
+      [
+        [
+          "Boshlang‘ich tizim",
+          "Yakuniy tizim",
+          "Tavsiya etilgan usul"
+        ],
+        [
+          "10-lik",
+          "2-lik",
+          "2 ga ketma-ket bo‘lish"
+        ],
+        [
+          "10-lik",
+          "8-lik",
+          "8 ga ketma-ket bo‘lish"
+        ],
+        [
+          "10-lik",
+          "16-lik",
+          "16 ga ketma-ket bo‘lish"
+        ],
+        [
+          "2-lik",
+          "10-lik",
+          "2 darajalari bo‘yicha yoyish"
+        ],
+        [
+          "8-lik",
+          "10-lik",
+          "8 darajalari bo‘yicha yoyish"
+        ],
+        [
+          "16-lik",
+          "10-lik",
+          "16 darajalari bo‘yicha yoyish"
+        ],
+        [
+          "2-lik",
+          "8-lik",
+          "3 bitli guruhlash"
+        ],
+        [
+          "2-lik",
+          "16-lik",
+          "4 bitli guruhlash"
+        ],
+        [
+          "8-lik",
+          "2-lik",
+          "Har bir raqamni 3 bit bilan almashtirish"
+        ],
+        [
+          "16-lik",
+          "2-lik",
+          "Har bir belgini 4 bit bilan almashtirish"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. O‘nlikdan ikkilikka o‘tkazishda nima sababdan 2 ga bo‘linadi?",
+      "2. Qoldiqlar qanday tartibda o‘qiladi?",
+      "3. Ikkilikdan o‘nlikka o‘tkazishda qaysi usul qo‘llanadi?",
+      "4. 2-likdan 8-likka o‘tkazishda necha bitdan guruhlanadi?",
+      "5. 2-likdan 16-likka o‘tkazishda necha bitdan guruhlanadi?",
+      "6. Sakkizlik raqamni ikkilikka o‘tkazish uchun nechta bit yetarli?",
+      "7. O‘n oltilik belgini ikkilikka o‘tkazish uchun nechta bit kerak?",
+      "8. A–F belgilarining o‘nlik qiymatlari qanday?",
+      "9. Nima sababdan 2↔8 va 2↔16 o‘tkazishlari qulay?",
+      "10. Windows Calculator ning Programmer rejimi qanday vazifada yordam beradi?"
+    ]
+  },
+  "6.docx": {
+    "title": "6-Amaliy mashg‘ulot: Turli xil sanoq tizimlarida arifmetik amallarni bajarish",
+    "tables": [
+      [
+        [
+          "A",
+          "B",
+          "Kirish carry",
+          "Natija biti",
+          "Chiqish carry"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      ],
+      [
+        [
+          "Amal",
+          "Natija",
+          "Izoh"
+        ],
+        [
+          "0 – 0",
+          "0",
+          "Qarz olinmaydi"
+        ],
+        [
+          "1 – 0",
+          "1",
+          "Qarz olinmaydi"
+        ],
+        [
+          "1 – 1",
+          "0",
+          "Qarz olinmaydi"
+        ],
+        [
+          "0 – 1",
+          "1",
+          "Chap razryaddan 1 qarz olinadi: 10₂ – 1₂ = 1₂"
+        ]
+      ],
+      [
+        [
+          "Amal",
+          "Natija",
+          "O‘nlik tekshiruv"
+        ],
+        [
+          "1011₂ + 0110₂",
+          "10001₂",
+          "11 + 6 = 17"
+        ],
+        [
+          "1101₂ – 0101₂",
+          "1000₂",
+          "13 – 5 = 8"
+        ],
+        [
+          "101₂ × 11₂",
+          "1111₂",
+          "5 × 3 = 15"
+        ],
+        [
+          "57₈ + 26₈",
+          "105₈",
+          "47 + 22 = 69"
+        ],
+        [
+          "A7₁₆ + 1C₁₆",
+          "C3₁₆",
+          "167 + 28 = 195"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Ikkilik tizimda 1+1 natijasi nima?",
+      "2. Carry (ko‘chirish) nima?",
+      "3. 0–1 amalida qarz olish qanday bajariladi?",
+      "4. Ikkilik ko‘paytirishning asosiy qoidalari qanday?",
+      "5. Sakkizlik tizimda 7+1 natijasi qanday yoziladi?",
+      "6. O‘n oltilik tizimda F+1 natijasi qanday yoziladi?",
+      "7. Overflow nima?",
+      "8. 4 bitli unsigned sonlarning qiymat oralig‘i qanday?",
+      "9. Yarim qo‘shgichda SUM va CARRY qaysi mantiqiy amallar orqali hosil qilinadi?",
+      "10. Arifmetik natijani boshqa sanoq tizimida tekshirish nima uchun foydali?"
+    ]
+  },
+  "7.docx": {
+    "title": "7-Amaliy mashg‘ulot: Kompyuterlarni tashkil qilishning raqamli-mantiqiy asoslari",
+    "tables": [
+      [
+        [
+          "Mezon",
+          "Analog signal",
+          "Raqamli signal",
+          "Kompyuterdagi misol"
+        ],
+        [
+          "Qiymatlar",
+          "Uzluksiz oraliq",
+          "Diskret holatlar",
+          "0 va 1 bitlar"
+        ],
+        [
+          "Shovqin ta’siri",
+          "Nisbatan sezgir",
+          "Chegaralar yordamida tiklanishi mumkin",
+          "Raqamli shinalar"
+        ],
+        [
+          "Qayta ishlash",
+          "Analog sxemalar",
+          "Mantiqiy sxemalar",
+          "CPU, RAM, boshqaruv mantiqi"
+        ],
+        [
+          "Saqlash",
+          "Maxsus analog vositalar",
+          "Bitlar ketma-ketligi",
+          "SSD, RAM, registrlar"
+        ]
+      ],
+      [
+        [
+          "Xususiyat",
+          "Kombinatsion",
+          "Ketma-ket",
+          "Misollar"
+        ],
+        [
+          "Chiqishga ta’sir",
+          "Joriy kirish",
+          "Joriy kirish + avvalgi holat",
+          "—"
+        ],
+        [
+          "Xotira elementi",
+          "Talab qilinmaydi",
+          "Mavjud",
+          "Trigger, registr"
+        ],
+        [
+          "Vaqt omili",
+          "Mantiqiy kechikish",
+          "Kechikish + takt/holat",
+          "Hisoblagich"
+        ],
+        [
+          "Oddiy misol",
+          "AND/OR sxemasi",
+          "Registr",
+          "ALU va registrlar"
+        ]
+      ],
+      [
+        [
+          "Namunaviy tahlil: Klaviatura tugmasi bosilganda mexanik hodisa sodir bo‘ladi, lekin kompyuterga uzatiladigan natija raqamli kod ko‘rinishiga o‘tkaziladi. RAM dagi axborot raqamli bitlar orqali ifodalanadi; apparat darajasida bu bitlar mantiqiy sathlar bilan bog‘langan. Harorat tabiatda uzluksiz o‘zgaradi; raqamli tizim uni sensor va ADC orqali diskret sonli qiymatlarga aylantirishi mumkin."
+        ]
+      ],
+      [
+        [
+          "Obyekt/holat",
+          "Analog yoki raqamli",
+          "0/1 bilan bog‘lanishi",
+          "Izoh"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Raqamli signal nima?",
+      "2. Analog va raqamli signalning asosiy farqi nimada?",
+      "3. Mantiqiy 0 va mantiqiy 1 nima anglatadi?",
+      "4. Nima uchun mantiqiy sathlarning volt qiymatlari barcha qurilmalarda bir xil emas?",
+      "5. Kombinatsion sxema deganda nima tushuniladi?",
+      "6. Ketma-ket sxema kombinatsion sxemadan qanday farq qiladi?",
+      "7. Registr qaysi turdagi raqamli qurilmaga kiradi?",
+      "8. Raqamli tizimda xotira nima uchun kerak?",
+      "9. Kirish va chiqish signallari kompyuter tizimida qanday rol o‘ynaydi?",
+      "10. Raqamli mantiqni o‘rganish protsessor arxitekturasini tushunishga qanday yordam beradi?"
+    ]
+  },
+  "8.docx": {
+    "title": "8-Amaliy mashg‘ulot: Asosiy mantiqiy elementlar va mantiqiy sxemalarni loyihalash",
+    "tables": [
+      [
+        [
+          "Element",
+          "Boolean ifoda",
+          "Chiqish 1 bo‘lish sharti",
+          "Oddiy izoh"
+        ],
+        [
+          "AND",
+          "Y=A·B",
+          "A=1 va B=1",
+          "Ikkalasi ham 1"
+        ],
+        [
+          "OR",
+          "Y=A+B",
+          "Kamida bittasi 1",
+          "A yoki B 1"
+        ],
+        [
+          "NOT",
+          "Y=Ā",
+          "A=0",
+          "Kirishni teskarilaydi"
+        ],
+        [
+          "XOR",
+          "Y=A ⊕ B",
+          "Kirishlar turlicha",
+          "Faqat bittasi 1"
+        ],
+        [
+          "NAND",
+          "Y=¬(A·B)",
+          "AND natijasining teskarisi",
+          "AND + NOT"
+        ],
+        [
+          "NOR",
+          "Y=¬(A+B)",
+          "OR natijasining teskarisi",
+          "OR + NOT"
+        ]
+      ],
+      [
+        [
+          "A",
+          "B",
+          "AND",
+          "OR",
+          "XOR",
+          "NAND",
+          "NOR",
+          "XNOR"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      [
+        [
+          "Natijani tekshirish: A=0, B=0 → Y=0 A=0, B=1 → Y=0 A=1, B=0 → Y=0 A=1, B=1 → Y=1 Demak, sxema bitta 2-kirishli AND elementi bilan bajariladi."
+        ]
+      ],
+      [
+        [
+          "A",
+          "B",
+          "SUM = A ⊕ B",
+          "CARRY = A·B"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      ],
+      [
+        [
+          "A",
+          "B",
+          "AND",
+          "OR",
+          "XOR",
+          "Izoh"
+        ],
+        [
+          "0",
+          "0",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Mantiqiy element nima?",
+      "2. AND elementi qachon 1 hosil qiladi?",
+      "3. OR va XOR o‘rtasidagi farq nimada?",
+      "4. NOT elementi nechta kirishga ega?",
+      "5. NAND elementi qanday hosil qilinadi?",
+      "6. Rostlik jadvali nima uchun kerak?",
+      "7. Uchta kirish o‘zgaruvchisi uchun nechta kombinatsiya mavjud?",
+      "8. Yarim qo‘shgichning SUM chiqishi qaysi element bilan hosil qilinadi?",
+      "9. CARRY chiqishining mantiqiy ifodasi qanday?",
+      "10. NAND va NOR nega universal elementlar deyiladi?"
+    ]
+  },
+  "9.docx": {
+    "title": "9-Amaliy mashg‘ulot: Mantiqiy funksiyalarni Bul algebrasi yordamida ifodalash va soddalashtirish",
+    "tables": [
+      [
+        [
+          "Qonun",
+          "AND ko‘rinishi",
+          "OR ko‘rinishi",
+          "Amaliy ma’nosi"
+        ],
+        [
+          "Kommutativ",
+          "A·B=B·A",
+          "A+B=B+A",
+          "Tartib natijani o‘zgartirmaydi"
+        ],
+        [
+          "Assotsiativ",
+          "(A·B)·C=A·(B·C)",
+          "(A+B)+C=A+(B+C)",
+          "Guruhlash o‘zgarishi mumkin"
+        ],
+        [
+          "Identiklik",
+          "A·1=A",
+          "A+0=A",
+          "Neytral qiymat"
+        ],
+        [
+          "Nol/bir",
+          "A·0=0",
+          "A+1=1",
+          "Majburiy natija"
+        ],
+        [
+          "Idempotent",
+          "A·A=A",
+          "A+A=A",
+          "Takrorlash ortiqcha"
+        ],
+        [
+          "Komplement",
+          "A·Ā=0",
+          "A+Ā=1",
+          "O‘zining inkori bilan"
+        ],
+        [
+          "Absorbsiya",
+          "A(A+B)=A",
+          "A+A·B=A",
+          "Ortiqcha hadni yo‘qotadi"
+        ]
+      ],
+      [
+        [
+          "Misol: Y = ¬(A·B) De Morgan qonuniga ko‘ra: ¬(A·B) = Ā + B̄. Demak, NAND funksiyasini har ikki kirishni inkor qilib, OR elementi orqali ham ifodalash mumkin. Ikkinchi qonun: ¬(A+B) = Ā·B̄."
+        ]
+      ],
+      [
+        [
+          "Qoida",
+          "Mazmuni",
+          "Eslatma"
+        ],
+        [
+          "Guruh o‘lchami",
+          "1, 2, 4, 8 ... katak",
+          "2 ning darajasi bo‘lishi kerak"
+        ],
+        [
+          "Maqsad",
+          "Eng katta guruhlarni tanlash",
+          "Hadlar sonini kamaytiradi"
+        ],
+        [
+          "Qirralar",
+          "Chap–o‘ng va yuqori–past qirralar qo‘shni",
+          "Xarita “o‘ralgan” deb qaraladi"
+        ],
+        [
+          "Diagonal",
+          "Diagonal kataklar qo‘shni emas",
+          "Faqat yonma-yon"
+        ],
+        [
+          "Qamrov",
+          "Har bir 1 kamida bitta guruhga kirishi kerak",
+          "Guruhlar ustma-ust tushishi mumkin"
+        ]
+      ],
+      [
+        [
+          "A",
+          "B",
+          "Y",
+          "Y=1 bo‘lsa minterm"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "Ā·B"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "A·B̄"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "—"
+        ]
+      ],
+      [
+        [
+          "Variant",
+          "NOT soni",
+          "AND soni",
+          "OR soni",
+          "Jami element"
+        ],
+        [
+          "Dastlabki",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Soddalashtirilgan",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Boolean algebra nima?",
+      "2. AND va OR amallari Boolean yozuvda qanday belgilanadi?",
+      "3. Komplement qonuni nimani bildiradi?",
+      "4. Absorbsiya qonuniga misol keltiring.",
+      "5. De Morgan qonunlari qanday yoziladi?",
+      "6. Minterm nima?",
+      "7. Rostlik jadvalidan SOP ifoda qanday tuziladi?",
+      "8. Karnaugh xaritasining asosiy maqsadi nima?",
+      "9. K-map da guruh o‘lchami qanday bo‘lishi kerak?",
+      "10. Mantiqiy ifodani soddalashtirish sxemaga qanday amaliy foyda beradi?"
+    ]
+  },
+  "10.docx": {
+    "title": "10-Amaliy mashg‘ulot: Buyruqlar tizimi arxitekturasi va buyruq formatlarini o‘rganish",
+    "tables": [
+      [
+        [
+          "Belgi",
+          "RISC",
+          "CISC"
+        ],
+        [
+          "Buyruqlar tuzilishi",
+          "Nisbatan sodda va tartibli",
+          "Murakkab buyruqlar ham mavjud"
+        ],
+        [
+          "Buyruq uzunligi",
+          "Ko‘pincha bir xil yoki cheklangan formatlar",
+          "Turli uzunliklar bo‘lishi mumkin"
+        ],
+        [
+          "Xotira bilan ishlash",
+          "Load/store tamoyili kuchli",
+          "Ko‘proq murakkab operand imkonlari"
+        ],
+        [
+          "Dekodlash",
+          "Nisbatan sodda",
+          "Nisbatan murakkab"
+        ],
+        [
+          "Misollar",
+          "RISC-V, ARM oilalari",
+          "x86 oilasi"
+        ],
+        [
+          "Ta’limdagi qulaylik",
+          "Buyruq maydonlarini tushunish osonroq",
+          "Ko‘proq maxsus holatlar uchraydi"
+        ]
+      ],
+      [
+        [
+          "Registr",
+          "ABI nomi",
+          "Amaliy izoh"
+        ],
+        [
+          "x0",
+          "zero",
+          "Doimo 0 qiymatini beradi"
+        ],
+        [
+          "x1",
+          "ra",
+          "Funksiyadan qaytish manzili"
+        ],
+        [
+          "x2",
+          "sp",
+          "Stek ko‘rsatkichi"
+        ],
+        [
+          "x5–x7",
+          "t0–t2",
+          "Vaqtinchalik hisoblashlar"
+        ],
+        [
+          "x10–x17",
+          "a0–a7",
+          "Argumentlar va natijalar"
+        ],
+        [
+          "x18–x27",
+          "s2–s11",
+          "Saqlanuvchi registrlar"
+        ],
+        [
+          "x28–x31",
+          "t3–t6",
+          "Qo‘shimcha vaqtinchalik registrlar"
+        ]
+      ],
+      [
+        [
+          "Buyruq",
+          "Guruh",
+          "Qisqacha vazifa",
+          "Misol mazmuni"
+        ],
+        [
+          "add rd, rs1, rs2",
+          "Arifmetik",
+          "Ikki registrni qo‘shadi",
+          "rd = rs1 + rs2"
+        ],
+        [
+          "sub rd, rs1, rs2",
+          "Arifmetik",
+          "Ayirish",
+          "rd = rs1 − rs2"
+        ],
+        [
+          "and/or/xor",
+          "Mantiqiy",
+          "Bitlar bo‘yicha mantiqiy amal",
+          "Maskalash va bitlarni qayta ishlash"
+        ],
+        [
+          "addi rd, rs1, imm",
+          "Immediate",
+          "Registrga konstanta qo‘shadi",
+          "rd = rs1 + imm"
+        ],
+        [
+          "lw rd, offset(rs1)",
+          "Load",
+          "Xotiradan word yuklaydi",
+          "rd = Mem[rs1+offset]"
+        ],
+        [
+          "sw rs2, offset(rs1)",
+          "Store",
+          "Word ni xotiraga yozadi",
+          "Mem[rs1+offset] = rs2"
+        ],
+        [
+          "beq rs1, rs2, label",
+          "Branch",
+          "Teng bo‘lsa o‘tadi",
+          "if rs1==rs2 → label"
+        ],
+        [
+          "jal rd, label",
+          "Jump",
+          "Sakrash va qaytish manzilini saqlash",
+          "funksiya chaqirishda qo‘llanadi"
+        ]
+      ],
+      [
+        [
+          "Format",
+          "Asosiy qo‘llanish",
+          "Misollar"
+        ],
+        [
+          "R-type",
+          "Ikki registrli arifmetik/mantiqiy amallar",
+          "add, sub, and, or, xor"
+        ],
+        [
+          "I-type",
+          "Immediate amallar va load",
+          "addi, andi, lw, jalr"
+        ],
+        [
+          "S-type",
+          "Xotiraga yozish",
+          "sw, sh, sb"
+        ],
+        [
+          "B-type",
+          "Shartli o‘tish",
+          "beq, bne, blt, bge"
+        ],
+        [
+          "U-type",
+          "Yuqori immediate qiymatlarni yuklash",
+          "lui, auipc"
+        ],
+        [
+          "J-type",
+          "Uzoqroq shartsiz o‘tish",
+          "jal"
+        ]
+      ],
+      [
+        [
+          "Maydon",
+          "Qiymat",
+          "Izoh"
+        ],
+        [
+          "opcode",
+          "0110011",
+          "R-type integer register-register guruhi"
+        ],
+        [
+          "rd",
+          "x5",
+          "Natija yoziladigan registr"
+        ],
+        [
+          "funct3",
+          "000",
+          "ADD/SUB guruhini tanlash qismi"
+        ],
+        [
+          "rs1",
+          "x6",
+          "1-manba registr"
+        ],
+        [
+          "rs2",
+          "x7",
+          "2-manba registr"
+        ],
+        [
+          "funct7",
+          "0000000",
+          "ADD amalini SUB dan ajratishga yordam beradi"
+        ]
+      ],
+      [
+        [
+          "addi t0, x0, 10     # t0 = 10 addi t1, x0, 20     # t1 = 20 add  t2, t0, t1     # t2 = 30"
+        ]
+      ],
+      [
+        [
+          "Bosqich",
+          "Bajarilgan buyruq",
+          "t0",
+          "t1",
+          "t2"
+        ],
+        [
+          "Boshlanish",
+          "—",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "addi t0, x0, 10",
+          "10",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "addi t1, x0, 20",
+          "10",
+          "20",
+          "0"
+        ],
+        [
+          "3",
+          "add t2, t0, t1",
+          "10",
+          "20",
+          "30"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. ISA nima va uning vazifasi nimadan iborat?",
+      "2. Mikroarxitektura bilan ISA o‘rtasidagi farq nima?",
+      "3. RISC yondashuvining asosiy xususiyatlarini sanang.",
+      "4. RV32I yozuvidagi 32 va I nimani anglatadi?",
+      "5. x0 registrining o‘ziga xos xususiyati qanday?",
+      "6. rd, rs1 va rs2 maydonlari nimani bildiradi?",
+      "7. opcode nima vazifa bajaradi?",
+      "8. R-type va I-type formatlari qaysi jihatdan farq qiladi?",
+      "9. Load/store tamoyili deganda nima tushuniladi?",
+      "10. Ripes dasturi buyruqlar tizimini o‘rganishda qanday yordam beradi?"
+    ]
+  },
+  "11.docx": {
+    "title": "11-Amaliy mashg‘ulot: Operandlarni adreslash usullarini o‘rganish va amaliy masalalarni yechish",
+    "tables": [
+      [
+        [
+          "Buyruq",
+          "Operand manbasi",
+          "Natija"
+        ],
+        [
+          "add t2, t0, t1",
+          "t0 va t1 registrlari",
+          "t2"
+        ],
+        [
+          "sub t3, t2, t0",
+          "t2 va t0 registrlari",
+          "t3"
+        ],
+        [
+          "xor t4, t0, t1",
+          "t0 va t1 registrlari",
+          "t4"
+        ]
+      ],
+      [
+        [
+          "Baza (rs1)",
+          "Offset",
+          "EA",
+          "Izoh"
+        ],
+        [
+          "0x10010000",
+          "0",
+          "0x10010000",
+          "Birinchi word"
+        ],
+        [
+          "0x10010000",
+          "4",
+          "0x10010004",
+          "Ikkinchi word"
+        ],
+        [
+          "0x10010000",
+          "8",
+          "0x10010008",
+          "Uchinchi word"
+        ],
+        [
+          "0x10010000",
+          "12",
+          "0x1001000C",
+          "To‘rtinchi word"
+        ]
+      ],
+      [
+        [
+          "lw  t1, 0(t0)      # t1 = arr[0] lw  t2, 4(t0)      # t2 = arr[1] add t3, t1, t2    # t3 = arr[0] + arr[1]"
+        ]
+      ],
+      [
+        [
+          "lw  t1, 0(t0)      # 12 lw  t2, 4(t0)      # 25 add t3, t1, t2    # 37 sw  t3, 8(t0)      # arr[2] = 37"
+        ]
+      ],
+      [
+        [
+          "beq t0, t1, teng    # t0 == t1 bo‘lsa o‘tish addi t2, x0, 0      # teng bo‘lmasa bajariladi teng: addi t2, x0, 1      # teng bo‘lsa t2 = 1"
+        ]
+      ],
+      [
+        [
+          "Buyruq",
+          "Adreslash turi",
+          "Operand qayerdan olinadi?",
+          "Kutiladigan natija"
+        ],
+        [
+          "addi t0, x0, 10",
+          "Immediate",
+          "10 buyruq ichida",
+          "t0=10"
+        ],
+        [
+          "add t2, t0, t1",
+          "Registrli",
+          "t0 va t1 registrlari",
+          "t2=t0+t1"
+        ],
+        [
+          "lw t1, 8(t0)",
+          "Base+offset",
+          "Mem[t0+8]",
+          "xotiradagi word t1 ga"
+        ],
+        [
+          "sw t2, 12(t0)",
+          "Base+offset",
+          "t2 va Mem[t0+12]",
+          "t2 qiymati xotiraga"
+        ],
+        [
+          "beq t0, t1, label",
+          "PC-relative",
+          "registrlar + branch offset",
+          "shart rost bo‘lsa label ga o‘tadi"
+        ]
+      ],
+      [
+        [
+          "Variant",
+          "Baza qiymati",
+          "Offset",
+          "Topshiriq"
+        ],
+        [
+          "1",
+          "1000",
+          "12",
+          "EA ni toping va lw uchun yozuv tuzing"
+        ],
+        [
+          "2",
+          "2048",
+          "24",
+          "EA ni toping va sw uchun yozuv tuzing"
+        ],
+        [
+          "3",
+          "0x10010000",
+          "20",
+          "Qaysi massiv indeksiga mosligini toping (word)"
+        ],
+        [
+          "4",
+          "0x20000000",
+          "28",
+          "EA ni toping"
+        ],
+        [
+          "5",
+          "4096",
+          "36",
+          "Word massivida indeksni toping"
+        ],
+        [
+          "6",
+          "0x10011000",
+          "8",
+          "lw buyruq yozing"
+        ],
+        [
+          "7",
+          "5000",
+          "16",
+          "sw buyruq yozing"
+        ],
+        [
+          "8",
+          "0x00400020",
+          "+16",
+          "PC-relative target ni hisoblang"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Operand nima?",
+      "2. Adreslash usuli nimani belgilaydi?",
+      "3. Immediate adreslashga misol keltiring.",
+      "4. Registrli adreslashda operand qayerda joylashadi?",
+      "5. Effective Address qanday hisoblanadi?",
+      "6. lw va sw buyruqlari o‘rtasidagi farq nima?",
+      "7. Nima uchun 32 bitli word massivda offsetlar 4 baytdan oshib boradi?",
+      "8. Load/store arxitekturasi deganda nima tushuniladi?",
+      "9. PC-relative adreslash qaysi turdagi buyruqlarda qo‘llanadi?",
+      "10. Ripesda adreslash usulining to‘g‘ri bajarilganini qanday tekshirish mumkin?"
+    ]
+  },
+  "12.docx": {
+    "title": "12-Amaliy mashg‘ulot: Kompyuter xotirasining turlari va xotira ierarxiyasini o‘rganish",
+    "tables": [
+      [
+        [
+          "Pog‘ona",
+          "Asosiy vazifa",
+          "Tipik sig‘im",
+          "Kechikish darajasi",
+          "Uchuvchanlik"
+        ],
+        [
+          "Registr",
+          "Joriy operand va adreslar",
+          "bayt–KB",
+          "CPU sikllari",
+          "Ha"
+        ],
+        [
+          "L1 kesh",
+          "Eng faol kod/ma’lumot",
+          "o‘nlab–yuzlab KB/yadro",
+          "juda past",
+          "Ha"
+        ],
+        [
+          "L2 kesh",
+          "L1 dan kattaroq mahalliy kesh",
+          "yuzlab KB–MB/yadro",
+          "past",
+          "Ha"
+        ],
+        [
+          "L3/LLC",
+          "Yadrolar orasida umumiy kesh",
+          "MB–o‘nlab/100+ MB",
+          "past–o‘rta",
+          "Ha"
+        ],
+        [
+          "DRAM",
+          "Jarayonlarning ishchi xotirasi",
+          "GB–TB",
+          "o‘nlab–100+ ns",
+          "Ha"
+        ],
+        [
+          "NVMe/SATA SSD",
+          "Doimiy tezkor saqlash",
+          "yuzlab GB–TB",
+          "µs daraja",
+          "Yo‘q"
+        ],
+        [
+          "HDD/Arxiv",
+          "Katta sig‘im, arxiv",
+          "TB va yuqori",
+          "ms daraja",
+          "Yo‘q"
+        ]
+      ],
+      [
+        [
+          "Muhim izoh:  12.2-rasmdagi qiymatlar muayyan model uchun sertifikatlangan o‘lchov emas, arxitektura darajasidagi tartibni ko‘rsatish uchun berilgan taxminiy diapazonlardir. Real kechikish protsessor, xotira kontrolleri, DRAM konfiguratsiyasi, SSD navbati va fayl tizimiga bog‘liq."
+        ]
+      ],
+      [
+        [
+          "Get-CimInstance Win32_PhysicalMemory |   Select-Object Manufacturer, PartNumber, Capacity, Speed, ConfiguredClockSpeed"
+        ]
+      ],
+      [
+        [
+          "№",
+          "Holat",
+          "In use",
+          "Available",
+          "Cached",
+          "Committed"
+        ],
+        [
+          "1",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "2",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "3",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "4",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Xotira ierarxiyasi nima uchun kerak?",
+      "2. Temporal va fazoviy lokalik nima?",
+      "3. Registr va keshning asosiy farqi nimada?",
+      "4. RAM nima sababdan SSD dan tez, lekin ma’lumotni doimiy saqlamaydi?",
+      "5. Kesh hit va miss tushunchalari nimani bildiradi?",
+      "6. “Cached memory” ni “keraksiz egallangan RAM” deb hisoblash nima uchun noto‘g‘ri?",
+      "7. GiB va GB o‘rtasida qanday farq bor?",
+      "8. CXL xotira ierarxiyasida qanday yangi imkoniyatlar yaratadi?",
+      "9. Xotira tizimini faqat sig‘im bilan baholash nima uchun yetarli emas?",
+      "10. Bir dastur uchun ko‘p RAM bo‘lishi har doim tezlikning ikki baravar oshishini anglatadimi?"
+    ]
+  },
+  "13.docx": {
+    "title": "13-Amaliy mashg‘ulot: Xotira qurilmalarining xususiyatlari va texnik ko‘rsatkichlarini taqqoslash",
+    "tables": [
+      [
+        [
+          "Qurilma",
+          "Interfeys / mexanizm",
+          "Tipik kuchli tomoni",
+          "Cheklovi",
+          "Mos vazifa"
+        ],
+        [
+          "HDD",
+          "SATA, magnit mexanika",
+          "katta sig‘im va arzon GB",
+          "mexanik kechikish, zarbaga sezgir",
+          "arxiv, backup, media ombori"
+        ],
+        [
+          "SATA SSD",
+          "SATA + NAND flash",
+          "HDD ga nisbatan juda past latency",
+          "SATA interfeysi throughputni cheklaydi",
+          "OS, ofis, universal PC"
+        ],
+        [
+          "NVMe SSD",
+          "PCIe + NVMe",
+          "yuqori parallelizm, IOPS va bandwidth",
+          "qizish va modelga qarab katta farq",
+          "ishchi disk, montaj, kompilyatsiya"
+        ],
+        [
+          "USB flash",
+          "USB + flash controller",
+          "portativlik",
+          "kontroller va NAND sifati turlicha",
+          "fayl ko‘chirish, o‘rnatish media"
+        ],
+        [
+          "Tashqi SSD",
+          "USB4/USB 3.x/TB + SSD",
+          "tez va portativ",
+          "kabel/protokol cheklovi",
+          "media loyiha, mobil ish"
+        ]
+      ],
+      [
+        [
+          "2026-yil yangilanishi:  NVM Express konsorsiumi 2026-yil 4-avgustda NVMe spetsifikatsiyalar to‘plamining 2.4 avlodini e’lon qilgan. Bu fakt “har bir 2026 SSD NVMe 2.4 funksiyalarining barchasini qo‘llaydi” degani emas: qurilma kontrolleri va firmware faqat ma’lum funksiyalar to‘plamini amalga oshiradi."
+        ]
+      ],
+      [
+        [
+          "Get-PhysicalDisk |   Select-Object FriendlyName, MediaType, BusType, Size, HealthStatus"
+        ]
+      ],
+      [
+        [
+          "Get-Disk | Select-Object Number, FriendlyName, BusType, PartitionStyle, Size"
+        ]
+      ],
+      [
+        [
+          "Ko‘rsatkich",
+          "Nimani bildiradi?",
+          "Qaysi ishda muhim?",
+          "Talqin qilishdagi xato"
+        ],
+        [
+          "Sequential read/write",
+          "katta ketma-ket bloklar tezligi",
+          "video, katta fayl ko‘chirish",
+          "faqat shu son bilan “eng tez disk” deyish"
+        ],
+        [
+          "4K random I/O",
+          "kichik bloklarning tasodifiy ishlashi",
+          "OS, IDE, kichik fayllar",
+          "queue depthni e’tiborsiz qoldirish"
+        ],
+        [
+          "Latency",
+          "bir so‘rovga javob vaqti",
+          "interaktiv ishlar",
+          "faqat MB/s bilan baholash"
+        ],
+        [
+          "IOPS",
+          "sekundiga I/O operatsiya soni",
+          "server, DB, VM",
+          "blok hajmini ko‘rsatmaslik"
+        ],
+        [
+          "TBW/DWPD",
+          "yozish chidamliligi mezoni",
+          "yozuv ko‘p ishlar",
+          "kafolat sharti bilan aralashtirish"
+        ],
+        [
+          "Temperature",
+          "kontroller/NAND harorati",
+          "uzoq yuklama",
+          "throttlingni nazardan qochirish"
+        ]
+      ],
+      [
+        [
+          "№",
+          "Qurilma modeli",
+          "MediaType",
+          "BusType",
+          "Sig‘im",
+          "Kuzatilgan vazifa / natija"
+        ],
+        [
+          "1",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "2",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "3",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "4",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "5",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Throughput va latency nimasi bilan farq qiladi?",
+      "2. IOPS qanday ko‘rsatkich?",
+      "3. SATA SSD va NVMe SSD o‘rtasidagi asosiy arxitektura farqi nimada?",
+      "4. M.2 nima: protokolmi yoki form-faktormi?",
+      "5. Benchmarkni bir marta bajarish nima uchun yetarli emas?",
+      "6. SSD da thermal throttling nima?",
+      "7. TBW nimani ifodalaydi?",
+      "8. HDD qaysi vazifalarda hali ham maqsadga muvofiq?"
+    ]
+  },
+  "14.docx": {
+    "title": "14-Amaliy mashg‘ulot: Kesh va virtual xotiraning ishlash prinsipini o‘rganish",
+    "tables": [
+      [
+        [
+          "Atama",
+          "Mazmuni",
+          "Natijaga ta’siri"
+        ],
+        [
+          "Hit",
+          "kerakli line keshda topildi",
+          "past latency"
+        ],
+        [
+          "Miss",
+          "line keshda topilmadi",
+          "keyingi darajaga murojaat"
+        ],
+        [
+          "Hit rate",
+          "hitlar ulushi",
+          "yuqori bo‘lsa o‘rtacha kirish vaqti pasayadi"
+        ],
+        [
+          "Cache line",
+          "ko‘chiriladigan blok",
+          "fazoviy lokalikdan foydalanadi"
+        ],
+        [
+          "Associativity",
+          "blok joylashishi mumkin bo‘lgan yo‘llar soni",
+          "conflict misslarni kamaytirishi mumkin"
+        ],
+        [
+          "Write-back",
+          "yozuv avval keshda, keyin RAM ga",
+          "trafikni kamaytirishi mumkin"
+        ],
+        [
+          "Write-through",
+          "yozuv pastki darajaga ham uzatiladi",
+          "soddaroq konsistensiya, ko‘proq trafik"
+        ]
+      ],
+      [
+        [
+          "Windows bo‘yicha 2026-yil izohi:  Microsoft hujjatlariga ko‘ra, pagefile virtual xotiraning o‘zi emas; u tizimga ayrim kam ishlatiladigan o‘zgartirilgan sahifalarni RAM dan chiqarish, commit limitini kengaytirish va crash dump kabi vazifalarni qo‘llab-quvvatlashga yordam beradi. System-managed pagefile ko‘p foydalanuvchi tizimlari uchun xavfsiz default hisoblanadi; “RAM ko‘p bo‘lsa pagefile ni albatta o‘chirib qo‘yish kerak” umumiy qoida emas."
+        ]
+      ],
+      [
+        [
+          "Get-CimInstance Win32_PageFileUsage |   Select-Object Name, AllocatedBaseSize, CurrentUsage, PeakUsage"
+        ]
+      ],
+      [
+        [
+          "№",
+          "Kuzatuv",
+          "Tinch holat",
+          "Ish yukida",
+          "Izoh"
+        ],
+        [
+          "1",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "2",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "3",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "4",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "5",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Cache line nima?",
+      "2. Hit rate nega muhim?",
+      "3. TLB qanday vazifa bajaradi?",
+      "4. Virtual manzil bilan fizik manzil farqi nimada?",
+      "5. Page fault har doim xatomi?",
+      "6. Pagefile virtual xotiraning o‘zimi?",
+      "7. Working set nima?",
+      "8. Temporal lokalik uchun misol keltiring.",
+      "9. Set-associative kesh nima uchun direct-mapped keshga nisbatan conflict misslarni kamaytirishi mumkin?",
+      "10. Ko‘p RAM bo‘lsa pagefile ni o‘chirish umumiy qoida emasligini izohlang."
+    ]
+  },
+  "15.docx": {
+    "title": "15-Amaliy mashg‘ulot: RAID massivlari va ma’lumotlarni saqlash texnologiyalarini o‘rganish",
+    "tables": [
+      [
+        [
+          "Daraja",
+          "Min. disk",
+          "Foydali sig‘im (bir xil disklar)",
+          "Nosozlikka chidamlilik",
+          "Asosiy xususiyat"
+        ],
+        [
+          "RAID 0",
+          "2",
+          "N × S",
+          "0 disk",
+          "tezlik/sig‘im, himoya yo‘q"
+        ],
+        [
+          "RAID 1",
+          "2",
+          "taxminan S (2 diskda)",
+          "mirror guruhida 1",
+          "oddiy va ishonchli mirror"
+        ],
+        [
+          "RAID 5",
+          "3",
+          "(N−1) × S",
+          "1 disk",
+          "parity, yozishda qo‘shimcha ish"
+        ],
+        [
+          "RAID 6",
+          "4",
+          "(N−2) × S",
+          "2 disk",
+          "ko‘proq himoya, ko‘proq parity"
+        ],
+        [
+          "RAID 10",
+          "4",
+          "N/2 × S",
+          "juftliklarga bog‘liq",
+          "mirror + stripe, yaxshi I/O"
+        ]
+      ],
+      [
+        [
+          "Get-PhysicalDisk | Select FriendlyName, MediaType, BusType, Size, HealthStatus, OperationalStatus"
+        ]
+      ],
+      [
+        [
+          "№",
+          "Storage ssenariysi",
+          "Talab",
+          "Tavsiya etilgan yechim",
+          "Asoslash"
+        ],
+        [
+          "1",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "2",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "3",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "4",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "5",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "6",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. RAID 0 da nima uchun himoya yo‘q?",
+      "2. RAID 1 ning foydali sig‘imi qanday aniqlanadi?",
+      "3. RAID 5 va RAID 6 farqi nimada?",
+      "4. RAID 10 qanday ikki g‘oyani birlashtiradi?",
+      "5. Parity nima uchun kerak?",
+      "6. Rebuild nima?",
+      "7. RAID nega backup o‘rnini bosmaydi?",
+      "8. 3-2-1 qoidasini tushuntiring.",
+      "9. Snapshot va backup bir xilmi?"
+    ]
+  },
+  "16.docx": {
+    "title": "16-Amaliy mashg‘ulot: Kompyuter shinalari va ularning ishlash prinsipini o‘rganish",
+    "tables": [
+      [
+        [
+          "Avlod",
+          "Raw rate / lane",
+          "x16 ikki yo‘nalishli nazariy bandwidth (tax.)",
+          "Kodlash/uzatish yondashuvi",
+          "Holat"
+        ],
+        [
+          "PCIe 3.0",
+          "8 GT/s",
+          "~32 GB/s",
+          "128b/130b",
+          "keng tarqalgan legacy"
+        ],
+        [
+          "PCIe 4.0",
+          "16 GT/s",
+          "~64 GB/s",
+          "128b/130b",
+          "keng tarqalgan"
+        ],
+        [
+          "PCIe 5.0",
+          "32 GT/s",
+          "~128 GB/s",
+          "128b/130b",
+          "zamonaviy desktop/server"
+        ],
+        [
+          "PCIe 6.0",
+          "64 GT/s",
+          "~256 GB/s",
+          "PAM4 + FLIT/FEC",
+          "asosan yangi yuqori sinf/server"
+        ],
+        [
+          "PCIe 7.0",
+          "128 GT/s",
+          "~512 GB/s",
+          "PAM4 + FLIT/FEC",
+          "2025 spetsifikatsiya; joriy ommaviy qurilmada hali bosqichma-bosqich"
+        ]
+      ],
+      [
+        [
+          "2026-yil yangilanishi:  PCI-SIG PCI Express Base Specification 7.0 ni 2025-yil iyunida tasdiqlagan. 128 GT/s raw rate va x16 da 512 GB/s gacha ikki yo‘nalishli nazariy bandwidth — spetsifikatsiya imkoniyati. Bu 2026-yildagi har bir PC allaqachon PCIe 7.0 bilan jihozlangan degani emas; platformalarda avlodlar bosqichma-bosqich joriy etiladi."
+        ]
+      ],
+      [
+        [
+          "Get-PnpDevice -PresentOnly |   Where-Object { $_.InstanceId -like 'PCI*' } |   Select-Object Class, FriendlyName, Status"
+        ]
+      ],
+      [
+        [
+          "№",
+          "Qurilma",
+          "Shina/interfeys",
+          "Kutilgan link width / xususiyat",
+          "Aniqlash usuli"
+        ],
+        [
+          "1",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "2",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "3",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ],
+        [
+          "4",
+          "________________________",
+          "________________________",
+          "________________________",
+          "________________________"
+        ]
+      ]
+    ],
+    "questions": [
+      "1. Shina nima?",
+      "2. Address, data va control bus klassik modelda qanday vazifa bajaradi?",
+      "3. PCIe lane nima?",
+      "4. x16 nimani anglatadi?",
+      "5. GT/s va GB/s bir xil birlikmi?",
+      "6. PCIe avlodlarida backward compatibility qanday ishlaydi?",
+      "7. FLIT va FEC nima sababdan yuqori tezliklarda muhimlashadi?",
+      "8. CXL nima uchun ayniqsa data-markazlarda muhim?",
+      "9. Slot uzunligi va elektr lane soni nega farq qilishi mumkin?",
+      "10. Link maksimumi bilan real qurilma tezligi nega teng emas?"
+    ]
+  }
+}

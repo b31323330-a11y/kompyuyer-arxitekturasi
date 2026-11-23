@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="utf-8"><title>Kompyuter Arxitektori — aralash imtihon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f6fb;--card:#fff;--tx:#1b2333;--mu:#667085;--ac:#4f46e5;--ok:#16a34a;--no:#dc2626;--bd:#dde3ee}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1420;--card:#192032;--tx:#e8ecf5;--mu:#98a2b8;--ac:#818cf8;--ok:#4ade80;--no:#f87171;--bd:#2a3550}}
+:root[data-theme="dark"]{--bg:#0f1420;--card:#192032;--tx:#e8ecf5;--mu:#98a2b8;--ac:#818cf8;--ok:#4ade80;--no:#f87171;--bd:#2a3550;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,Segoe UI,Arial,sans-serif;min-height:100vh}
+#app{max-width:760px;margin:0 auto;padding:16px}h1{font-size:22px;margin:4px 0}.mu{color:var(--mu);font-size:14px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin:12px 0}
+button{font:inherit;color:inherit;cursor:pointer}
+.btn{background:var(--ac);color:#fff;border:0;border-radius:10px;padding:10px 16px;font-weight:600;margin:4px 4px 4px 0}.btn.o{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+.opt{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:8px 0;word-break:break-word}
+.opt:hover:not(:disabled){border-color:var(--ac)}.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,var(--card))}.opt.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 15%,var(--card))}
+.q{font-size:19px;font-weight:600;margin:12px 0}.pr{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0}.pr i{display:block;height:100%;background:var(--ac);transition:width 1s linear}
+.bits{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;text-align:center;margin:12px 0}.bits button{border:1px solid var(--bd);background:var(--card);border-radius:10px;padding:14px 0;font-size:20px;font-weight:700}.bits button.on{background:var(--ac);color:#fff}.bits span{font-size:12px;color:var(--mu)}
+.big{font-size:34px;font-weight:800;text-align:center}
+</style></head><body><div id="app"></div>
+<script>
+const NUM=[2,4,5,6,7,8,9,10,11,12,13,14,15,16],R=(a,b)=>a+Math.random()*(b-a+1)|0;
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const P=(c,w)=>{const s=[];for(const x of w)if(x!=c&&!s.includes(x))s.push(x);return[c,...s.slice(0,3)]};
+const H=n=>"0x"+n.toString(16).toUpperCase(),B=(n,l=0)=>n.toString(2).padStart(l,"0");
+const T=[
+{n:"Qurilmalar",g:[],s:[
+["Tashqi SSD qaysi guruhga kiradi?","Tashqi, kiritish-chiqarish va saqlash","Ichki, faqat chiqarish","Tashqi, faqat kiritish","Ichki, faqat kiritish"],
+["Qog‘oz hujjatlarni raqamlashtirish uchun qaysi qo‘shimcha qurilma kerak?","Skaner","Printer","Proyektor","Kolonka"],
+["Proyektor qaysi guruhga kiradi?","Tashqi, chiqarish","Tashqi, kiritish","Ichki, saqlash","Ichki, kiritish"],
+["Kiritish–qayta ishlash–saqlash–chiqarish modelida monitor qaysi bosqichda?","Chiqarish","Kiritish","Saqlash","Qayta ishlash"],
+["Qaysi qurilma ikki yo‘nalishda ma’lumot almashadi?","Sensorli ekran","Mikrofon","Printer","Klaviatura"]]},
+{n:"Sanoq tizimlari",g:[()=>{const n=R(33,127);return[`${B(n)}₂ sonining o‘nlikdagi qiymati?`,...P(n,[n+1,n-1,n+2,n-2,n^4,n+8])]}],s:[
+["Qaysi yozuv sakkizlik tizimda mavjud bo‘la olmaydi?","389₈","725₈","101₈","777₈"],
+["555₁₀ da o‘rtadagi 5 ning razryad qiymati?","50","5","500","55"],
+["Ishorasiz 8 bitli sonlar diapazoni?","0…255","0…256","−128…127","1…255"],
+["1 nibble + 1 bayt necha bit?","12","8","16","10"]]},
+{n:"O‘tkazish",g:[()=>{const n=R(20,250);return[`${n}₁₀ ning ikkilik yozuvi?`,...P(B(n),[n^1,n^2,n^4,n+1,n-1].map(x=>B(x)))]},()=>{const n=R(16,255);return[`${B(n,8)}₂ ning o‘n oltilik yozuvi?`,...P(n.toString(16).toUpperCase(),[n^1,n^16,n+1,n-1,((n&15)<<4)|(n>>4)].map(x=>x.toString(16).toUpperCase()))]}],s:[
+["2D₁₆ ning o‘nlikdagi qiymati?","45","29","43","213"],
+["55₈ ning o‘nlikdagi qiymati?","45","55","40","35"],
+["BC6₁₆ ning ikkilik yozuvi?","101111000110","101111001010","110011000110","101101000110"]]},
+{n:"Arifmetika",g:[()=>{const a=R(5,15),b=R(5,15);return[`${B(a,4)}₂ + ${B(b,4)}₂ = ? (ikkilikda)`,...P(B(a+b),[a+b+1,a+b-1,(a+b)^2,a^b].map(x=>B(x)))]},()=>{const a=R(200,255),b=R(60,120),c=(a+b)&255;return[`8 bitli ishorasiz hisobda ${a} + ${b} = ? (o‘nlik, overflow hisobga olinsin)`,...P(c,[a+b,c+1,c-1,255])]}],s:[
+["Ikkilikda 0 − 1 bajarilganda nima sodir bo‘ladi?","Chapdagi razryaddan 1 qarz olinadi, natija 1","Natija 0 va ko‘chirish hosil bo‘ladi","Natija −1","Overflow bo‘lmaydi, natija 0"],
+["Half Adder da ko‘chirish biti qaysi amal bilan olinadi?","A AND B","A XOR B","A OR B","NOT A"],
+["Sakkizlik tizimda 7 + 1 = ?","10₈","8₈","70₈","11₈"]]},
+{n:"Raqamli mantiq",g:[],s:[
+["Mantiqiy 0 va 1 ning kuchlanishi haqida to‘g‘ri fikr?","Mantiqiy oilaga bog‘liq; muhimi — kirish chegaradan past yoki yuqoriligi","Har doim 0 V va 5 V","Har doim 0 V va 3,3 V","Barcha qurilmada 0 V va 1 V"],
+["Qaysi qurilma ketma-ket (sequential) turga kiradi?","D-trigger / registr","Yarim qo‘shgich","AND elementi","NOT elementi"],
+["Analog signal xususiyati?","Uzluksiz qiymatlar qabul qiladi","Faqat 0 va 1","Faqat ikki sath","Shovqinga sezgir emas"],
+["Raqamli sxemada bitni saqlash vazifasini nima bajaradi?","Xotira elementlari (trigger, registr)","Faqat AND elementlari","Faqat kiritish qurilmasi","NOT elementi"]]},
+{n:"Mantiqiy elementlar",g:[],s:[
+["XNOR(A,B)=1 qachon bo‘ladi?","Kirishlar teng bo‘lganda","Kirishlar turlicha bo‘lganda","Faqat ikkalasi 1 bo‘lganda","Faqat ikkalasi 0 bo‘lganda"],
+["NAND(1,1) va NOR(0,0) natijalari ketma-ket?","0 va 1","1 va 0","0 va 0","1 va 1"],
+["NAND ning ikkala kirishini birlashtirsak, qaysi element hosil bo‘ladi?","NOT","AND","OR","XOR"],
+["Yarim qo‘shgich qaysi elementlardan tuziladi?","XOR va AND","OR va NOT","NOT va NOT","NOR va OR"],
+["3 kirishli sxemani to‘liq tekshirish uchun nechta kombinatsiya kerak?","8","6","9","3"]]},
+{n:"Bul algebrasi",g:[],s:[
+["A·(A+B) = ?","A","B","A+B","A·B"],
+["De Morgan: ¬(A+B) = ?","¬A·¬B","¬A+¬B","A·B","¬A+B"],
+["3 o‘zgaruvchili Karnaugh xaritasida nechta katak bor?","8","6","9","4"],
+["A·Ā + B = ?","B","A","0","1"],
+["Ifodani soddalashtirishning amaliy foydasi?","Kamroq element, arzonroq sxema va kamroq kechikish","Rostlik jadvali o‘zgaradi","Kirishlar soni ortadi","Funksiya boshqa bo‘lib qoladi"]]},
+{n:"ISA",g:[],s:[
+["Xotiradan registrga ma’lumot yuklovchi RISC-V buyrug‘i?","lw","sw","add","beq"],
+["sw buyrug‘i qaysi formatga kiradi?","S-format","R-format","U-format","J-format"],
+["RISC yondashuvi uchun xos belgi?","Soddalashtirilgan, tartibli buyruq formatlari","Juda ko‘p murakkab, turli uzunlikdagi buyruqlar","Faqat xotira–xotira amallari","Registrlarning yo‘qligi"],
+["add x5, x6, x7 qaysi formatga kiradi?","R-format","I-format","S-format","B-format"],
+["Bir xil ISA ga mos, lekin mikroarxitekturasi turlicha protsessorlar…","Bir xil mashina kodini bajara oladi","Turli kod talab qiladi","Faqat bitta kompilyatorda ishlaydi","Bir-biriga mos kelmaydi"]]},
+{n:"Adreslash",g:[()=>{const b=0x10010000+R(0,15)*16,o=4*R(1,12),c=b+o;return[`t0 = ${H(b)} bo‘lsa, lw t1, ${o}(t0) ning samarali manzili?`,...P(H(c),[c+4,c-4,b+o*2,b].map(H))]},()=>{const i=R(2,25);return[`32 bitli massivda ${i}-indeksli elementning bayt offseti?`,...P(4*i,[i,2*i,8*i,4*i+4])]}],s:[
+["beq/bne buyruqlarida manzil qanday topiladi?","PC-relative (PC + offset)","Faqat registrdan","Immediate xotira","Base+offset"],
+["Load/store arxitekturasi nimani anglatadi?","Arifmetika registrlarda, xotiraga faqat load/store orqali murojaat","Arifmetika to‘g‘ridan-to‘g‘ri xotirada bajariladi","Registrlar yo‘q","Faqat bevosita adreslash ishlatiladi"],
+["add t2, t0, t1 qaysi adreslash turi?","Registrli","Immediate","Base+offset","PC-relative"]]},
+{n:"Xotira ierarxiyasi",g:[()=>{const h=[80,90,95,99][R(0,3)],c=+(h/100*2+(1-h/100)*100).toFixed(1);return[`Hit rate ${h}%, keshga murojaat 2 ns, miss bo‘lsa jami 100 ns. O‘rtacha kirish vaqti?`,...P(c.toFixed(1)+" ns",[(c+1.5).toFixed(1),(c-1).toFixed(1),(c*2).toFixed(1),"51.0"].map(x=>x+" ns"))]}],s:[
+["Tezlik bo‘yicha tez → sekin tartib?","Registr → L1 → DRAM → SSD → HDD","DRAM → L1 → Registr → SSD → HDD","SSD → DRAM → L1 → Registr → HDD","L1 → Registr → HDD → DRAM → SSD"],
+["Eng tez xotira nima uchun katta hajmda qurilmaydi?","Juda qimmat va fizik jihatdan qiyin","Qonun taqiqlaydi","Tezlikka ta’sir qilmaydi","Faqat SSD ga ruxsat beriladi"],
+["Quvvat o‘chganda qaysi biri mazmunini yo‘qotadi?","DRAM","NVMe SSD","HDD","Firmware flash"],
+["Bir xil GB hajmdagi RAM va SSD nega turlicha vazifa bajaradi?","Kechikish va uchuvchanlik farqi sababli","Ular bir xil qurilma","SSD faqat kiritish qurilmasi","RAM doimiy saqlaydi"]]},
+{n:"Saqlash qurilmalari",g:[()=>{const s=R(4,40),v=[100,125,200,250,400,500][R(0,5)],c=s*1000/v;return[`${s} GB fayl ${v} MB/s ketma-ket tezlikda necha soniyada ko‘chadi? (1 GB = 1000 MB)`,...P(c+" s",[c*2,c/2,c+10,c*1.5].map(x=>+x.toFixed(1)+" s"))]}],s:[
+["Reklamadagi 7000 MB/s odatda nimani bildiradi?","Ketma-ket o‘qishning maksimumini","Real o‘rtacha tezlikni","Tasodifiy 4 KiB IOPS ni","Kechikishni"],
+["M.2 slotida SATA SSD bo‘lishi mumkinmi?","Ha, M.2 form-faktor","Yo‘q, faqat NVMe","Yo‘q, faqat HDD","Faqat USB"],
+["Latency nima?","Bitta I/O so‘roviga javob vaqti","Soniyadagi operatsiyalar soni","Vaqt birligida uzatilgan hajm","Disk sig‘imi"],
+["Ko‘plab kichik fayl bilan ishlashda qaysi ko‘rsatkich muhimroq?","IOPS va latency","Faqat sig‘im","Faqat ketma-ket tezlik","Narx/rang"]]},
+{n:"Kesh va virtual xotira",g:[],s:[
+["Cache line nima?","Keshga blok sifatida olib kiriladigan ma’lumot birligi","Bitta bit","Sahifa jadvali","Disk sektori"],
+["Fazoviy lokalikdan qaysi mexanizm foydalanadi?","Cache line (yaqin elementlarni birga olib kelish)","Write-through","Pagefile","TLB miss"],
+["MMU ning vazifasi?","Virtual manzilni sahifa jadvali orqali fizik manzilga tarjima qilish","Diskni formatlash","Ovozni qayta ishlash","Tarmoq paketlarini yo‘naltirish"],
+["Write-back siyosati qanday ishlaydi?","Yozuv avval keshda qoladi, keyin RAM ga yoziladi","Yozuv darhol pastki darajaga uzatiladi","Yozuv umuman saqlanmaydi","Faqat diskka yoziladi"],
+["Pagefile haqida to‘g‘ri fikr?","U virtual xotiraning o‘zi emas","U virtual xotiraning o‘zi","U RAM chipi","U kesh darajasi"],
+["Hard fault nega sekinroq?","Disk/SSD dan ma’lumot olib kelish kerak bo‘ladi","Kesh to‘la bo‘ladi","CPU o‘chiq bo‘ladi","Sahifa jadvali bo‘lmaydi"]]},
+{n:"RAID",g:[()=>{const L=[[0,n=>n,"0"],[5,n=>n-1,"1"],[6,n=>n-2,"2"],[10,n=>n/2,"juftlikka bog‘liq"]],l=L[R(0,3)],N=l[0]==6?R(4,8):l[0]==10?[4,6,8][R(0,2)]:R(3,8),S=[1,2,4][R(0,2)],c=l[1](N)*S;return[`RAID ${l[0]}, ${N} ta ${S} TB disk. Foydali sig‘im?`,...P(c+" TB",[N*S,(N-1)*S,(N-2)*S,N/2*S,c+S].map(x=>x+" TB"))]}],s:[
+["RAID 1 (2 disk) nechta diskning nosozligiga chidaydi?","1","0","2","3"],
+["Foydalanuvchi faylni tasodifan o‘chirsa, nima himoya qiladi?","Alohida backup nusxa","RAID 1","RAID 5","RAID 6"],
+["Kichik random write da RAID 5 nega sekinroq?","Parity uchun qo‘shimcha o‘qish/hisoblash (write penalty)","Disklar kam","Mirror ko‘p","Kesh yo‘q"],
+["3-2-1 strategiyasidagi “1” nimani bildiradi?","Bitta nusxa boshqa joyda (off-site)","Bitta RAID massiv","Bitta disk","Bitta foydalanuvchi"],
+["RAID 0 ning asosiy xususiyati?","Tezlik va sig‘im, himoya yo‘q","Mirror nusxa","Ikkita parity","Avtomatik backup"]]},
+{n:"Shinalar",g:[()=>{const g=[[3,8],[4,16],[5,32],[6,64]][R(0,3)],n=[1,4,8,16][R(0,3)],c=g[1]*n;return[`PCIe ${g[0]}.0 x${n} linkining jami raw tezligi (har lane ${g[1]} GT/s)?`,...P(c+" GT/s",[g[1]*(n+4),g[1]/2*n,g[1]*n*2,g[1]+n].map(x=>x+" GT/s"))]}],s:[
+["PCIe lane haqida to‘g‘ri fikr?","Mustaqil uzatish va qabul differensial juftliklaridan iborat","Bitta ma’lumot simi","Faqat parallel shina","Faqat xotira uchun"],
+["CXL.cache va CXL.mem nimani qo‘llab-quvvatlaydi?","Cache va memory semantikasini","Faqat USB ulanishini","Fayl tizimini","Audio signalni"],
+["Zamonaviy kompyuterdagi bog‘lanishlar ko‘pincha qanday quriladi?","Yuqori tezlikdagi serial point-to-point linklar","Umumiy parallel shina","Faqat analog simlar","Faqat simsiz kanal"],
+["NVMe SSD odatda qaysi PCIe link kengligidan foydalanadi?","x4","x16","x1","x32"],
+["Slotning fizik uzunligi va elektr lane soni…","Har doim bir xil bo‘lavermaydi","Har doim bir xil","Doim x1","Bir-biriga bog‘liq emas, hujjat shart emas"]]}];
+const $=document.getElementById("app");let G;
+const ld=k=>{try{return JSON.parse(localStorage.getItem(k))||[]}catch(e){return[]}},sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const rank=o=>o>=9?"🏆 Arxitektor":o>=7?"🥇 Muhandis":o>=5?"🥈 Texnik":"🥉 Boshlovchi";
+function home(){
+ const h=ld("ka_hist"),best=h.reduce((a,b)=>Math.max(a,b),0);
+ $.innerHTML=`<h1>🧠 Kompyuter Arxitektori</h1><p class="mu">Aralash imtihon: har o‘yinda 14 ta amaliy mashg‘ulotdan 10 ta savol, har safar yangi savollar. Har savolga 45 soniya.</p><div class="card"><div class="bar"><span class="chip">O‘yinlar: ${h.length}</span><span class="chip">Eng yaxshi: ${h.length?best+" ball":"—"}</span></div><p class="mu">Takrorlanmaslik uchun ko‘rilgan savollar eslab qolinadi; formulali savollarda sonlar har safar o‘zgaradi.</p><button class="btn" onclick="start()">▶️ O‘yinni boshlash</button><button class="btn o" onclick="bits()">🎮 Bit o‘yini</button><button class="btn o" onclick="sv('ka_seen',[]);sv('ka_hist',[]);home()">Tozalash</button></div>`}
+function start(){
+ let seen=ld("ka_seen");G={qs:[],i:0,sc:0,ok:0,st:0,bad:[]};
+ sh([...Array(14).keys()]).slice(0,10).forEach(t=>{
+  const X=T[t];let c=X.s.map((q,i)=>[q,t+"."+i]).filter(p=>!seen.includes(p[1]));
+  if(!c.length&&!X.g.length){seen=seen.filter(k=>k.split(".")[0]!=t);c=X.s.map((q,i)=>[q,t+"."+i])}
+  const pool=c.concat(...X.g.map(f=>[[f],[f]])),p=pool[R(0,pool.length-1)];
+  let q;if(p[0] instanceof Function)q=p[0]();else{q=p[0];seen.push(p[1])}
+  G.qs.push({t,q})});
+ sv("ka_seen",seen);ask()}
+function ask(){
+ if(G.i>=10)return end();
+ const {t,q}=G.qs[G.i];G.o=sh(q.slice(1).map((x,k)=>({x,c:!k})));G.a=0;G.tm=45;
+ $.innerHTML=`<div class="bar"><h1>Savol ${G.i+1}/10</h1><span class="chip">⭐ ${G.sc}</span></div><div class="card"><div class="bar mu"><span>${NUM[t]}-amaliy mashg‘ulot · ${T[t].n}</span><span id="tm">45 s</span></div><div class="pr"><i id="pb" style="width:100%"></i></div><div class="q">${q[0]}</div>`+G.o.map((o,k)=>`<button class="opt" onclick="pick(${k})">${o.x}</button>`).join("")+`<div id="fb"></div></div>`;
+ clearInterval(G.iv);G.iv=setInterval(()=>{G.tm--;document.getElementById("tm").textContent=G.tm+" s";document.getElementById("pb").style.width=G.tm/45*100+"%";if(G.tm<=0)pick(-1)},1000)}
+function pick(k){
+ if(G.a)return;G.a=1;clearInterval(G.iv);const b=document.querySelectorAll(".opt"),c=k>=0&&G.o[k].c;
+ b.forEach((e,j)=>{e.disabled=true;if(G.o[j].c)e.classList.add("ok")});
+ if(c){G.ok++;G.st++;G.sc+=10+(G.tm/5|0)+Math.min(G.st-1,3)*2}else{G.st=0;if(k>=0)b[k].classList.add("no");G.bad.push(G.qs[G.i].t)}
+ document.getElementById("fb").innerHTML=`<p>${c?"✅ To‘g‘ri!"+(G.st>1?" 🔥 Seriya "+G.st:""):k<0?"⏰ Vaqt tugadi. To‘g‘ri javob yashil rangda.":"❌ Noto‘g‘ri. To‘g‘ri javob yashil rangda."}</p><button class="btn" onclick="G.i++;ask()">${G.i<9?"Keyingisi →":"Natija"}</button>`}
+function end(){
+ const h=ld("ka_hist");h.push(G.sc);sv("ka_hist",h.slice(-50));
+ const bad=[...new Set(G.bad)].map(t=>`${NUM[t]}-amaliy (${T[t].n})`).join(", ");
+ $.innerHTML=`<div class="card"><div class="big">${rank(G.ok)}</div><p class="big" style="font-size:22px">${G.ok}/10 to‘g‘ri · ⭐ ${G.sc} ball</p>${bad?`<p>📚 Takrorlash tavsiya etiladi: ${bad}</p>`:"<p>🎉 Xatosiz! Barcha mavzular yaxshi o‘zlashtirilgan.</p>"}<button class="btn" onclick="start()">🔄 Yangi o‘yin (boshqa savollar)</button><button class="btn o" onclick="home()">Bosh sahifa</button></div>`}
+let Bt;
+function bits(){Bt={t:R(1,255),v:Array(8).fill(0)};bd()}
+const bs=()=>Bt.v.reduce((a,b,i)=>a+b*(128>>i),0);
+function bd(){$.innerHTML=`<div class="card"><h2 style="margin:0">🎮 Bit o‘yini</h2><p class="mu">Bitlarni yoqib, o‘nlik sonni ikkilikda hosil qiling.</p><div class="big">${Bt.t}</div><div class="bits">`+Bt.v.map((b,i)=>`<div><span>${128>>i}</span><button class="${b?"on":""}" onclick="Bt.v[${i}]^=1;bd()">${b}</button></div>`).join("")+`</div><p class="mu">Hozirgi qiymat: ${bs()}</p><div id="fb"></div><button class="btn" onclick="chk()">Tekshirish</button><button class="btn o" onclick="home()">Orqaga</button></div>`}
+function chk(){document.getElementById("fb").innerHTML=bs()==Bt.t?`<p>✅ To‘g‘ri!</p><button class="btn" onclick="bits()">Keyingi son →</button>`:`<p>❌ Hozir ${bs()} hosil bo‘ldi, yana urinib ko‘ring.</p>`}
+home();
+</script></body></html>
