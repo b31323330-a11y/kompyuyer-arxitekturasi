@@ -26,6 +26,7 @@ export const TopHUD: React.FC<TopHUDProps> = ({ onOpenCheatSheet, onOpenSettings
     xp, 
     coins,
     dailyStreak, 
+    powerUps,
     soundEnabled, 
     theme, 
     toggleSound, 
@@ -92,6 +93,19 @@ export const TopHUD: React.FC<TopHUDProps> = ({ onOpenCheatSheet, onOpenSettings
         <div className="flex items-center space-x-1.5 px-3 py-1.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold">
           <Flame className="w-4 h-4 animate-bounce" />
           <span>{dailyStreak} kunlik seriya</span>
+        </div>
+
+        {/* Power-ups Inventory */}
+        <div 
+          onClick={() => setActiveTab('arcade')}
+          className="cursor-pointer flex items-center space-x-2 px-3 py-1.5 rounded-2xl bg-[#0B1528] border border-[#1E2E4A] hover:border-cyan-500/40 text-xs font-mono font-bold transition-colors"
+          title="Mini-o'yinlar qurol-yarog'i (Power-uplar)"
+        >
+          <span title="Vaqtni to'xtatish (Freeze)">❄️ {powerUps?.freeze ?? 3}</span>
+          <span className="text-slate-600">|</span>
+          <span title="Maslahat (Hint)">💡 {powerUps?.hint ?? 3}</span>
+          <span className="text-slate-600">|</span>
+          <span title="50/50 tanlov">⚡ {powerUps?.fiftyFifty ?? 3}</span>
         </div>
       </div>
 

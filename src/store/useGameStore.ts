@@ -15,6 +15,7 @@ export const ACHIEVEMENTS: AchievementItem[] = [
   { id: 'bit_wizard', title: "Bit Sehrgari", description: "Bit panelida 5 ta son ketma-ket aniq yig‘ildi", icon: "Binary", category: 'sanoq' },
   { id: 'alu_master', title: "ALU Mash’ali", description: "Carry va Borrow amallari xatosiz bajarildi", icon: "Calculator", category: 'sanoq' },
   { id: 'overflow_detector', title: "Overflow Qalqoni", description: "Unsigned Overflow bayrog‘i to‘g‘ri aniqlandi", icon: "AlertTriangle", category: 'sanoq' },
+  { id: 'signal_analyst', title: "Signal Tahlilchisi", description: "Analog va raqamli ossillograf shovqinini bartaraf etdi", icon: "Radio", category: 'sanoq' },
   { id: 'logic_artisan', title: "Mantiq Ustasi", description: "Mantiqiy sxemalar konstruktorida barcha kombinatsiyalar tekshirildi", icon: "GitBranch", category: 'mantiq' },
   { id: 'kmap_genius', title: "Karnaugh Dahosi", description: "3-o‘zgaruvchili K-map orqali minimal SOP topildi", icon: "Layers", category: 'mantiq' },
   { id: 'demorgan_pro', title: "De Morgan Fenomeni", description: "Bul algebrasi qonunlari bo‘yicha testlar to‘liq yechildi", icon: "Sparkles", category: 'mantiq' },
@@ -24,12 +25,15 @@ export const ACHIEVEMENTS: AchievementItem[] = [
   { id: 'storage_guru', title: "Saqlash Qurilmalari Guru", description: "HDD, SATA va NVMe SSD taqqoslash matritsasi o‘rganildi", icon: "HardDrive", category: 'xotira' },
   { id: 'raid_rescuer', title: "RAID Qutqaruvchisi", description: "RAID inqirozida disk ishdan chiqishi bartaraf etildi", icon: "ShieldAlert", category: 'raid' },
   { id: 'pcie_speedster', title: "PCIe 7.0 Poygachisi", description: "PCIe 7.0 va CXL o‘tkazuvchanlik topshirig‘i yechildi", icon: "Gauge", category: 'raid' },
+  { id: 'cxl_master', title: "CXL Interkonnekt Ustasi", description: "PCIe 7.0 va CXL 4.0 xotira topologiyasi muvaffaqiyatli ulandi", icon: "Cpu", category: 'raid' },
   { id: 'boss_slayer', title: "Bosslar Kushandasi", description: "Kamida 3 ta kampaniya bossi mag‘lub etildi", icon: "Swords", category: 'master' },
   { id: 'streak_inferno', title: "Olovli Marafon", description: "Imtihon Arenada 7 ta savollik xatosiz seriya qayd etildi", icon: "Flame", category: 'master' },
   { id: 'grand_architect', title: "Bosh Arxitektor", description: "2500 XP to‘plab Afsonaviy Arxitektor maqomiga erishildi", icon: "Crown", category: 'master' },
   { id: 'arcade_champion', title: "Arkada Chempioni", description: "Barcha 12 ta mini-o‘yinda qatnashib rekord o‘rnatildi", icon: "Gamepad2", category: 'master' },
   { id: 'truth_seeker', title: "Haqiqat Qidiruvchisi", description: "'Afsona yoki Haqiqat' sprintida 15+ to‘g‘ri javob berildi", icon: "CheckCircle2", category: 'master' },
   { id: 'qa_scholar', title: "Imtihon Allomasi", description: "50 ta nazorat savollari to‘liq o‘zlashtirildi", icon: "BookOpen", category: 'master' },
+  { id: 'simulation_pioneer', title: "Virtual Lab Kashfiyotchisi", description: "Barcha 8 ta apparat simulyatorida tajribalar o‘tkazildi", icon: "Activity", category: 'master' },
+  { id: 'perfect_architect', title: "Mukammal Arxitektor", description: "Barcha 14 ta amaliyot bo‘yicha 100% o‘zlashtirishga erishildi", icon: "ShieldCheck", category: 'master' },
   { id: 'quantum_master', title: "Kvant Arxitektori", description: "3500 XP to‘plab eng oliy Kvant Pog‘onasiga erishildi", icon: "Sparkles", category: 'master' },
 ];
 
@@ -87,6 +91,11 @@ export interface GameState {
   // Arcade Mini-Games (12 ta)
   arcadeHighScores: Record<string, number>;
   selectedArcadeGame: string | null;
+  arcadeDifficulty: Record<string, 'easy' | 'medium' | 'pro'>;
+  powerUps: { freeze: number; hint: number; fiftyFifty: number };
+
+  // Virtual Simulators (8 ta: Sandbox & Missions)
+  simulatorProgress: Record<string, { completedMissions: string[]; sandboxExperiments: number }>;
 
   // Topic masteries (14 labs)
   topicStats: Record<number, { correct: number; total: number }>;
@@ -110,6 +119,11 @@ export interface GameState {
   recordArcadeScore: (gameId: string, score: number) => void;
   updateArcadeScore: (gameId: string, score: number, rewardCoins?: number, rewardXp?: number) => void;
   setSelectedArcadeGame: (gameId: string | null) => void;
+  setArcadeDifficulty: (gameId: string, diff: 'easy' | 'medium' | 'pro') => void;
+  usePowerUp: (type: 'freeze' | 'hint' | 'fiftyFifty') => boolean;
+  addPowerUp: (type: 'freeze' | 'hint' | 'fiftyFifty', count?: number) => void;
+  completeSimulatorMission: (simId: string, missionId: string) => void;
+  recordSimulatorExperiment: (simId: string) => void;
   recordAnswer: (labId: number, questionId: string, isCorrect: boolean) => void;
   recordTopicScore: (labId: number, isCorrect: boolean) => void;
   toggleMasterQuestion: (qId: string) => void;
@@ -163,6 +177,9 @@ export const useGameStore = create<GameState>()(
       chapterStars: {},
       arcadeHighScores: {},
       selectedArcadeGame: null,
+      arcadeDifficulty: {},
+      powerUps: { freeze: 3, hint: 3, fiftyFifty: 3 },
+      simulatorProgress: {},
       topicStats: DEFAULT_TOPIC_STATS,
       wrongQuestionIds: [],
       masteredQuestions: [],
@@ -236,6 +253,76 @@ export const useGameStore = create<GameState>()(
 
       setSelectedArcadeGame: (gameId) => {
         set({ selectedArcadeGame: gameId });
+      },
+
+      setArcadeDifficulty: (gameId, diff) => {
+        set(state => ({
+          arcadeDifficulty: { ...state.arcadeDifficulty, [gameId]: diff },
+        }));
+      },
+
+      usePowerUp: (type) => {
+        const state = get();
+        if (state.powerUps[type] > 0) {
+          sound.playPowerUp();
+          set({
+            powerUps: {
+              ...state.powerUps,
+              [type]: state.powerUps[type] - 1,
+            },
+          });
+          return true;
+        }
+        sound.playError();
+        return false;
+      },
+
+      addPowerUp: (type, count = 1) => {
+        set(state => ({
+          powerUps: {
+            ...state.powerUps,
+            [type]: (state.powerUps[type] || 0) + count,
+          },
+        }));
+      },
+
+      completeSimulatorMission: (simId, missionId) => {
+        set(state => {
+          const current = state.simulatorProgress[simId] || { completedMissions: [], sandboxExperiments: 0 };
+          if (!current.completedMissions.includes(missionId)) {
+            sound.playUnlock();
+            const updatedMissions = [...current.completedMissions, missionId];
+            const updatedProgress = {
+              ...state.simulatorProgress,
+              [simId]: { ...current, completedMissions: updatedMissions },
+            };
+            const totalMissions = Object.values(updatedProgress).reduce((acc, p) => acc + p.completedMissions.length, 0);
+            const updatedAch = { ...state.achievements };
+            if (totalMissions >= 8 && !updatedAch['simulation_pioneer']?.unlocked) {
+              updatedAch['simulation_pioneer'] = { unlocked: true, unlockedAt: new Date().toLocaleDateString() };
+            }
+            return {
+              simulatorProgress: updatedProgress,
+              xp: state.xp + 50,
+              coins: state.coins + 15,
+              achievements: updatedAch,
+            };
+          }
+          return {};
+        });
+      },
+
+      recordSimulatorExperiment: (simId) => {
+        set(state => {
+          const current = state.simulatorProgress[simId] || { completedMissions: [], sandboxExperiments: 0 };
+          return {
+            simulatorProgress: {
+              ...state.simulatorProgress,
+              [simId]: { ...current, sandboxExperiments: current.sandboxExperiments + 1 },
+            },
+            xp: state.xp + 5,
+          };
+        });
       },
 
       recordTopicScore: (labId, isCorrect) => {
